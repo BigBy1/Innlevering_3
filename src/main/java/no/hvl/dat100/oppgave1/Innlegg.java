@@ -4,7 +4,10 @@ import no.hvl.dat100.common.TODO;
 
 public abstract class Innlegg {
 	
-	// TODO - deklarering av objektvariable
+	int id;
+	String bruker;
+	int likes;
+	String dato;
 	
 	public Innlegg() {
 		
@@ -12,7 +15,10 @@ public abstract class Innlegg {
 	
 	public Innlegg(int id, String bruker, String dato) {
 
-		// TODO 
+		id = this.id;
+		bruker = this.bruker;
+		dato = this.dato;
+		likes = 0;
 		throw new UnsupportedOperationException(TODO.constructor("Innlegg"));
 	}
 
