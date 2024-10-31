@@ -15,62 +15,82 @@ public abstract class Innlegg {
 	
 	public Innlegg(int id, String bruker, String dato) {
 
-		id = this.id;
-		bruker = this.bruker;
-		dato = this.dato;
+		this.id = id;
+		this.bruker = bruker;
+		this.dato = dato;
 		likes = 0;
-		throw new UnsupportedOperationException(TODO.constructor("Innlegg"));
 	}
 
 	public Innlegg(int id, String bruker, String dato, int likes) {
 
-		// TODO - START
+		this.id = id;
+		this.bruker = bruker;
+		this.dato = dato;
+		this.likes = likes;
 		
-		throw new UnsupportedOperationException(TODO.constructor("Innlegg"));
 	}
 	
 	public String getBruker() {
 		
-		throw new UnsupportedOperationException(TODO.method());
+		return bruker;
 
 	}
 
 	public void setBruker(String bruker) {
-		throw new UnsupportedOperationException(TODO.method());
+		this.bruker = bruker;
 	}
 
 	public String getDato() {
-		throw new UnsupportedOperationException(TODO.method());
+		return dato;
 		
 	}
 
 	public void setDato(String dato) {
-		throw new UnsupportedOperationException(TODO.method());
+		this.dato = dato;
 	}
-
+	public void setId(int id) {
+		
+		this.id = id;
+	
+	}
 	public int getId() {
-		throw new UnsupportedOperationException(TODO.method());
+		return id;
 
 	}
 
 	public int getLikes() {
-		throw new UnsupportedOperationException(TODO.method());
+		
+		return likes;
 
 	}
 	
 	public void doLike () {
-		throw new UnsupportedOperationException(TODO.method());
+			likes = likes+1;
 	}
 	
 	public boolean erLik(Innlegg innlegg) {
-		throw new UnsupportedOperationException(TODO.method());
+		boolean erlik;
+		
+		int id_1 = this.getId();
+		
+		int id_2 = innlegg.getId();
+		
+		if (id_1==id_2) {
+			erlik = true;
+		}
+		else {
+			erlik=false;
+		}
+		return erlik;
 
 	}
 	
 	@Override
 	public String toString() {
 		
-		throw new UnsupportedOperationException(TODO.method());
+		String str = id+"\n"+bruker+"\n"+dato+"\n"+likes+"\n";
+		System.out.print(str);
+		return str;
 				
 	}
 	
