@@ -9,7 +9,7 @@ public class Tekst extends Innlegg {
 	int likes;
 	
 	public Tekst () {
-		
+	 super();	
 	}
 	
 	public Tekst(int id, String bruker, String dato, String tekst) {
