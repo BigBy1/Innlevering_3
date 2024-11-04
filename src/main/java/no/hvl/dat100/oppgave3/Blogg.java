@@ -5,14 +5,21 @@ import no.hvl.dat100.oppgave1.*;
 
 public class Blogg {
 
-	// TODO: objektvariable 
+	private Innlegg[] innleggstabell;
+	private int antall;
 
-	public Blogg() {
-		throw new UnsupportedOperationException(TODO.constructor("Blogg"));
-	}
+	public Blogg (double antall) {
+		
+		int antallI = (int) antall;
+			innleggstabell = new Innlegg[20];
+		int neseLedige = antallI+1;
+		}
+		
 
 	public Blogg(int lengde) {
-		throw new UnsupportedOperationException(TODO.constructor("Blogg"));
+		
+			innleggstabell = new Innlegg[lengde];
+		int neseLedige = antall+1;
 	}
 
 	public int getAntall() {
