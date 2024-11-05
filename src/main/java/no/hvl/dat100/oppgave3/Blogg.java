@@ -60,13 +60,20 @@ public class Blogg {
 	}
 
 	public boolean ledigPlass() {
-		return nesteLedige < innleggstabell.length;
+		boolean plass;
+		if(nesteLedige>=innleggstabell.length) {
+			plass = false;
+		}
+		else {
+			plass = true;
+		}
+		return plass;
 
 	}
 	
 	public boolean leggTil(Innlegg innlegg) {
 
-		throw new UnsupportedOperationException(TODO.method());
+		if (ledigP)
 	}
 	
 	public String toString() {
