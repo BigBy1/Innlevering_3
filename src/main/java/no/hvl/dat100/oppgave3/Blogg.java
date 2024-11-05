@@ -60,14 +60,7 @@ public class Blogg {
 	}
 
 	public boolean ledigPlass() {
-		boolean plass;
-		if(nesteLedige>=innleggstabell.length) {
-			plass = false;
-		}
-		else {
-			plass = true;
-		}
-		return plass;
+		return nesteLedige < innleggstabell.length;
 
 	}
 	
