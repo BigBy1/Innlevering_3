@@ -6,42 +6,68 @@ import no.hvl.dat100.oppgave1.*;
 public class Blogg {
 
 	private Innlegg[] innleggstabell;
-	private int antall;
+	
+	int nesteLedige;
 
-	public Blogg (double antall) {
-		
-		int antallI = (int) antall;
-			innleggstabell = new Innlegg[20];
-		int neseLedige = antallI+1;
-		}
-		
+	public Blogg() {
+		innleggstabell = new Innlegg[20];
+		nesteLedige = 0;
+
+	}
 
 	public Blogg(int lengde) {
+		innleggstabell = new Innlegg[lengde];
+		nesteLedige = 0;
 		
-			innleggstabell = new Innlegg[lengde];
-		int neseLedige = antall+1;
 	}
 
 	public int getAntall() {
-		throw new UnsupportedOperationException(TODO.method());
+		return nesteLedige;
 	}
 	
 	public Innlegg[] getSamling() {
-		throw new UnsupportedOperationException(TODO.method());
+		return innleggstabell;
 
 	}
 	
 	public int finnInnlegg(Innlegg innlegg) {
-
-		throw new UnsupportedOperationException(TODO.method());
+		
+		boolean fant = false;
+		
+		for (int i=0;i<nesteLedige&&fant==false;i++) {
+			
+			if(innleggstabell[i].erLik(innlegg)) {
+				fant = true;
+				return i;
+			}
+			else if(i==nesteLedige-1) {
+				return -1;
+			}
+			
+		}
+		return 0;
 	}
 
 	public boolean finnes(Innlegg innlegg) {
-		throw new UnsupportedOperationException(TODO.method());
+		boolean finnes = false;
+		for (int i = 0; i<nesteLedige; i++) {
+			if(innleggstabell[i].erLik(innlegg)) {
+				finnes=true;
+			}
+		}
+		
+		return finnes;
 	}
 
 	public boolean ledigPlass() {
-		throw new UnsupportedOperationException(TODO.method());
+		boolean plass;
+		if(nesteLedige>=innleggstabell.length) {
+			plass = false;
+		}
+		else {
+			plass = true;
+		}
+		return plass;
 
 	}
 	
