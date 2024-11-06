@@ -35,8 +35,8 @@ public class Tekst extends Innlegg {
 	@Override
 	public String toString() {
 		
-		this.tekst = "TEKST"+"\n"+getId()+"\n"+getBruker()+"\n"+getDato()+"\n"+getLikes()+"\n"+"en tekst"+"\n";
-		return tekst;
+		this.tekst = "TEKST"+"\n"+getId()+"\n"+getBruker()+"\n"+getDato()+"\n"+getLikes()+"\n"+tekst+"\n";
+		return this.tekst;
 
 	}
 	
