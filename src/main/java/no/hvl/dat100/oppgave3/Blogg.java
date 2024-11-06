@@ -45,7 +45,7 @@ public class Blogg {
 			}
 			
 		}
-		return 0;
+		return -1;
 	}
 
 	public boolean finnes(Innlegg innlegg) {
@@ -73,7 +73,14 @@ public class Blogg {
 	
 	public boolean leggTil(Innlegg innlegg) {
 
-		if (ledigP)
+		if (ledigPlass()&&!finnes(innlegg)) {
+			innleggstabell[nesteLedige] = innlegg;
+			nesteLedige=nesteLedige+1;
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
 	public String toString() {
