@@ -87,8 +87,10 @@ public class Blogg {
 		String str="";
 		String tekst;
 		for (int i=0; i<innleggstabell.length;i++) {
+			if (innleggstabell[i] != null) {
 			tekst = innleggstabell[i].toString();
 			str=str+tekst;
+			}
 		}
 		str = nesteLedige+"\n"+str;
 		return str;
